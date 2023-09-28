@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test!</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              main: ["Open Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main
+      class="min-h-screen p-4 flex justify-center items-center bg-gray-600 font-main"
+    >
+      <div
+        id="container"
+        class="relative py-12 px-2 md:px-16 bg-white min-w-max w-[400px] min-h-[200px] drop-shadow-xl select-none"
+        tabindex="-1"
+      >
+        <div class="text-center space-y-8">
+          <div class="grid grid-cols-3 items-center">
+            <div class="flex flex-col">
+              <span class="text-xs">WPM</span>
+              <span id="wpm" class="text-lg">0</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs">Time</span>
+              <span id="clock" class="text-lg"></span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs">Score</span>
+              <span id="score" class="text-lg"></span>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span id="word" class="text-xl"></span>
+            <span id="word-next" class="text-base w-full text-gray-500"></span>
+          </div>
+          <div>
+            <input
+              id="input"
+              class="text-xl break-words bg-transparent outline-none text-center w-full placeholder:text-gray-200"
+              placeholder="Start typing..."
+              maxlength="20"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </div>
+        </div>
+
+        <div
+          id="overlay"
+          class="absolute w-full h-full left-0 top-0 backdrop-blur-sm"
+        >
+          <div class="flex h-full justify-center items-center">
+            <span class="text-black text-3xl"> Click to focus! </span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

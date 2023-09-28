@@ -1,0 +1,41 @@
+.vibrate {
+  animation-name: vibrate;
+  animation-duration: 200ms;
+}
+
+@keyframes vibrate {
+  0% {
+    background-color: pink;
+    transform: translate(0%);
+  }
+  33% {
+    background-color: pink;
+    transform: translate(-2%);
+  }
+
+  66% {
+    background-color: pink;
+    transform: translate(2%);
+  }
+  100% {
+    background-color: pink;
+    transform: translate(0%);
+  }
+}
+
+.slide-up {
+  animation-name: slide-up;
+  animation-duration: 200ms;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translate(0, 100%);
+    color: #6b7280;
+  }
+
+  100% {
+    transform: translate(0);
+    color: black;
+  }
+}
